@@ -12,4 +12,5 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^user$', ScrumlyApp.views.ListUsersView.as_view(), name='user-list',),
     url(r'^user/new$', ScrumlyApp.views.CreateUserView.as_view(), name='user-new',),
+    url(r'^project$', ScrumlyApp.views.TestProject.as_view(), name='project',),
 )

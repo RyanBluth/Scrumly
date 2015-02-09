@@ -22,3 +22,48 @@ class User(models.Model):
             self.last_name,
             self.first_name
         ])
+
+
+class Project(models.Model):
+    title = models.CharField(
+        max_length=255
+    )
+
+    users = models.ManyToManyField(User)
+
+
+class Iteration(models.Model):
+    title = models.CharField(
+        max_length=255
+    )
+
+    start_date = models.DateTimeField()
+
+    end_date = models.DateTimeField()
+
+    project = models.ForeignKey(Project)
+
+
+class Category(models.Model):
+    title = models.CharField(
+        max_length=255
+    )
+
+    iteration = models.ForeignKey(Iteration)
+
+
+class Task(models.Model):
+    title = models.CharField(
+        max_length=255
+    )
+
+    description = models.CharField(
+        max_length=5000
+    )
+
+    category = models.ForeignKey(Category)
+
+    assignee = models.ForeignKey(User)
+
+
+
