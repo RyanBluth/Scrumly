@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="{% static 'stylesheets/main.css' %}" rel="stylesheet" media="screen"/>
+</head>
+<body>
+    <div class="header">
+        <h1 class="logo">Scrumly</h1>
+    </div>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

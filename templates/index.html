@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>Scrumly</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
 <a href="{% url "user-list" %}">Users</a>
 <a href="{% url "project" %}">Test Project</a>
-</body>
-</html>
+{% endblock %}
