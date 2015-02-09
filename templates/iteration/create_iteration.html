@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Add Iteration</h1>
+    <form action="{% url "create_iteration" %}" method="POST">
+        {% csrf_token %}
+        <ul>
+            {{ form.as_ul }}
+        </ul>
+        <input id="save_iteration" type="submit" value="Save" />
+    </form>
+{% endblock %}

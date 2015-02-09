@@ -1,7 +1,7 @@
 __author__ = 'ryan'
 
 from django.db import models
-
+from django.template.defaultfilters import slugify
 
 # Base user class
 class User(models.Model):

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Iterations</h1>
+<ul>
+    {% for iter in iteration_list %}
+        <li class="iteration">{{ iter }}</li>
+    {% endfor %}
+    <a href="{% url "create_iteration" %}">New Iteration</a>
+</ul>
+{% endblock %}
